@@ -1,6 +1,6 @@
-const server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+const server_port = process.env.PORT || 8080
 const password = process.env.PASSWORD || "password"
-const server_ip_address = process.env.OPENSHIFT_NODEJS_IP || 'localhost'
+const server_ip_address = process.env.IP || 'localhost'
 const game_title = process.env.GAME_TITLE || 'Some of these people are lying'
 console.log("Environment Variables")
 console.log("Title: "+game_title)
