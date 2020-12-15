@@ -1,0 +1,295 @@
+body > div {
+  background-color: #eeeeee;
+}
+#shade {
+  background-color:rgba(0,0,0,0.8);
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0px;
+  left:0px;
+  z-index:1000;
+}
+#name-dialog {
+  position: fixed;
+  width: 30vw;
+  left: 35vw;
+  /*height: 30vh;*/
+  top: 35vh;
+  background-color: #eee;
+  opacity: 1;
+  border-radius: 4vmin;
+  padding: 3vmin;
+}
+#name-field {
+  border-radius: 1vmin;
+}
+#name-join-button, #name-error-alert {
+  margin-top: 2vh;
+  border-radius: 1vmin;
+  margin-bottom: 0;
+}
+.hidden {
+  display: none !important;
+}
+
+#disconnected-alert {
+  width: 80vw;
+  position: fixed;
+  top:10vmin;
+  left:10vw;
+  z-index:1001;
+}
+
+.player-name {
+  float: left;
+}
+.this-player .player-name {
+  font-weight: bolder;
+}
+li.player-card.this-player {
+  background-color: rgba(0,123,255,0.2);
+}
+.player-hand-size {
+  float: right;
+}
+.player-hand-size .number {
+  font-weight: bold;
+}
+.player-card.disconnected {
+  font-style: italic;
+  background-color: rgba(0,0,0,0.1);
+  color: #888888;
+}
+.player-card.has-article {
+  border-left: 3px solid green;
+}
+.player-admin-button {
+  float: right;
+  margin-right: 0.5em;
+}
+
+h2 {
+  text-align: center;
+}
+#console-area, #chat-area {
+  max-height: 30vh;
+  overflow-y: scroll;
+  border-top-right-radius: .25rem;
+  border-top-left-radius: .25rem;
+  margin-top: 2vmin;
+  /*border: 0.5px solid rgba(112,128,144,0.5);*/
+  border: 1px solid rgba(0,0,0,.125)
+}
+#console-area::-webkit-scrollbar, #chat-area::-webkit-scrollbar  {
+  display:none;
+}
+#console-list, #chat-list {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+#console-list li, #chat-list li{
+  list-style-type: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+#console-list li:nth-child(odd), #chat-list li:nth-child(odd){
+  background-color: rgba(0,0,0,0.1);
+}
+#console-list li:nth-last-child(1) {
+    background-image: linear-gradient(0, rgba(0,0,0,0.2), transparent);
+    padding-top:  0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bolder;
+    border-bottom: 2px solid slategrey;
+}
+#chat-input>.form-control, #chat-input>.input-group-append>.btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.chat-player-name {
+  font-weight: bold;
+}
+.chat-player-message {
+  font-style: italic;
+}
+
+#players-sidebar {
+  width: 25vw;
+  height: 100vh;
+  background-color: #f9f7ef;
+  box-shadow: rgba(0,0,0,0.2) 0 0 1rem;
+  padding: 2vmin;
+  position: relative;
+  overflow-y: auto;
+}
+#players-sidebar.admin-padding{
+  padding-bottom: calc(1.5em + .75rem + 2px + 4vmin);
+}
+#players-list {
+  margin-top: 2vmin;
+  margin-bottom: 2vmin;
+}
+#new-game-button-container {
+  position: fixed;
+  bottom: 2vmin;
+  width: calc( 25vw - 4vmin );
+}
+#new-game-button input {
+  text-align: right;
+}
+#main-panel {
+  width: 75vw;
+  top: 10vh;
+  position: fixed;
+  left: 25vw;
+  height: 80vh;
+}
+#discard-area {
+  position: fixed;
+  right: 0px;
+  padding-right: 10vw;
+  vertical-align: middle;
+}
+#deck-area, #hand-scroll-container {
+  position: fixed;
+  left: 35vw;
+}
+#hand-scroll-container {
+  top: 55vh;
+  width: 75vw;
+  left: 25vw;
+}
+#hand-area {
+  height: 30vh;
+  padding-left: 15vmin;
+  margin-left: 5vmin;
+  margin-right: 5vmin;
+}
+div.card {
+  height: 30vmin;
+  width: 20vmin;
+  background: white;
+  border-radius: 1.5vmin;
+  box-shadow: 0vh 0vh 1vmin 0.2vmin rgba(0,0,0,0.1);
+  margin-bottom: -18vmin;
+}
+div.card.face-down {
+  background-color: darkred;
+  border: 1vmin solid white;
+  position: relative;
+}
+div.card.face-up {
+  float: left;
+  margin-left: -15vmin;
+}
+div.card.face-up.red {
+  color: red;
+}
+div.card.face-up.black {
+  color: black;
+}
+div.card-number, div.card-suit {
+  width: 5vmin;
+  height: 5vmin;
+  font-size: 4vh;
+  text-align: center;
+  font-weight: bolder;
+  float: top;
+}
+div.card-number.flipped, div.card-suit.flipped {
+  transform: rotate(180deg);
+  transform-origin: center;
+  margin-left: 15vmin;
+  margin-top: 10vmin;
+  margin-bottom: -10vmin;
+}
+div.card.face-up.discard:nth-last-child(6) {
+  opacity: 85%;
+  background-color: rgba(255,255,255,0.8);
+}
+div.card.face-up.discard:nth-last-child(7) {
+  opacity: 70%;
+  background-color: rgba(255,255,255,0.7);
+}
+div.card.face-up.discard:nth-last-child(8) {
+  opacity: 50%;
+  background-color: rgba(255,255,255,0.7);
+}
+div.card.face-up.discard:nth-last-child(9) {
+  opacity: 30%;
+  background-color: rgba(255,255,255,0.7);
+}
+div.card.face-up.discard:nth-last-child(10) {
+  opacity: 10%;
+}
+
+div.number-coin {
+  background-color: white;
+  width: 12vmin;
+  height: 12vmin;
+  border-radius: 6vmin;
+  align-self: center;
+  margin-top: 8vmin;
+  text-align: center;
+}
+div.number-coin .number {
+  font-size: 5vmin;
+  font-weight: bolder;
+}
+
+div.card-button {
+  width: 4vmin;
+  height: 5vmin;
+  text-align: center;
+  font-size: 2vmin;
+  position: absolute;
+  bottom: 1vmin;
+}
+#left-button {
+  left: 1vmin;
+}
+#shuffle-button {
+  left: 6vmin;
+  width: 6vmin;
+}
+#right-button {
+  right: 1vmin;
+}
+
+#my-article, #display-article {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-right: 5vw;
+  height: 10vh;
+}
+#display-article {
+  height: 70vh;
+}
+
+#chosen-article-intro-text, #display-article-intro-text {
+  width: 25%;
+  float: left;
+  line-height: 2.5rem;
+}
+#article-input {
+  width: 75%;
+  float: left;
+}
+#chosen-article-title, #display-article-title {
+  width: 75%;
+  font-weight: bold;
+  float: left;
+  font-size: 1.5rem;
+}
+#display-article-frame {
+  width: 90%;
+  margin-top: 5vh;
+  height: 60vh;
+}

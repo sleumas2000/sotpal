@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>Some of these people are lying</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="https://kit.fontawesome.com/57a1d05ad9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div>
+      <div id="players-sidebar">
+        <h2>Players</h2>
+        <ul id="players-list" class="list-group"></ul>
+
+        <div id="new-game-button-container" class="hidden">
+          <div id="new-game-button" class="input-group">
+            <div class="input-group-prepend">
+              <button class="btn btn-secondary" id="advance-button" type="button">Advance</button>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-secondary" id="new-game-submit-button" type="button">New game</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main-panel">
+        <div id="my-article">
+          <div id="chosen-article-intro-text">Your chosen article is:</div>
+          <div id="article-input" class="input-group hidden">
+            <input type="text" class="form-control" id="article-field" placeholder="Article Title">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" id="article-send-button" type="button">Submit</button>
+            </div>
+          </div>
+          <div id="chosen-article-title"></div>
+        </div>
+        <div id="display-article">
+          <div id="display-article-intro-text">This round's article is:</div>
+          <div id="display-article-title"></div>
+          <iframe id="display-article-frame"></iframe>
+        </div>
+      </div>
+    </div>
+    <div id="shade">
+      <div id="name-dialog">
+        <h2>Welcome</h1>
+        <p>Enter your name.</p>
+        <input id="name-field" type="text" placeholder="Name" class="form-control">
+        <input id="name-join-button" type="button" class="btn btn-block btn-primary" value="Join game">
+        <div id="name-error-alert" class="alert alert-danger hidden" role="alert">
+          This name is in use, sorry
+        </div>
+      </div>
+      <div id="disconnected-alert" class="alert alert-danger hidden" role="alert">
+        You have been disconnected. Please refresh the page to reconnect
+      </div>
+    </div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.11.1.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

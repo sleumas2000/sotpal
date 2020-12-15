@@ -1,0 +1,14 @@
+{
+  "name": "sotpal",
+  "version": "0.0.1",
+  "description": "Some of these people are lying",
+  "dependencies": {
+    "express": "^4.17.1",
+    "follow-redirects": "^1.13.0",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js"
+}
